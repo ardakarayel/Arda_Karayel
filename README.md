@@ -25,6 +25,7 @@ Utilize Data Science Techniques
 Apply statistical methods and visualization techniques to identify correlations between education and happiness.
 
 #Datasets
+
 This project will use publicly available datasets from Kaggle:
 
 World Happiness Report Dataset:https://www.kaggle.com/datasets/unsdsn/world-happiness
