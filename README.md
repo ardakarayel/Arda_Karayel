@@ -38,17 +38,17 @@ Key Variables in the Dataset
 
 Education-Related Variables
 
-Education Index → Combines mean years of schooling and expected years of schooling.
-Tertiary Enrollment Rate → Percentage of people enrolled in higher education.
-Adult Literacy Rate → Percentage of adults who can read and write
+- Education Index → Combines mean years of schooling and expected years of schooling.
+- Tertiary Enrollment Rate → Percentage of people enrolled in higher education.
+- Adult Literacy Rate → Percentage of adults who can read and write
 
 Happiness-Related Variables
 
-Happiness Score → Well-being index on a scale of 0 to 10.
-GDP per Capita → Economic performance indicator.
-Social Support Index → Measures the strength of community and support systems.
-Freedom Index → Measures the perceived level of personal freedom.
-Both datasets will be merged using the "Country" field to ensure accurate comparisons.
+- Happiness Score → Well-being index on a scale of 0 to 10.
+- GDP per Capita → Economic performance indicator.
+- Social Support Index → Measures the strength of community and support systems.
+- Freedom Index → Measures the perceived level of personal freedom.
+- Both datasets will be merged using the "Country" field to ensure accurate comparisons.
 
 #Methodology
 
