@@ -19,6 +19,7 @@ Whether higher-value teams consistently perform better.
 The extent to which financial investment impacts match outcomes.
 Anomalies where lower-value teams outperform expectations.
 
+
 Deliverables
 All findings, visualizations, and insights will be documented in a GitHub repository, including code, datasets, and reports.
 
