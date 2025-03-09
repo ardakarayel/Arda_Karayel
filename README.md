@@ -50,7 +50,7 @@ Social Support Index → Measures the strength of community and support systems.
 Freedom Index → Measures the perceived level of personal freedom.
 Both datasets will be merged using the "Country" field to ensure accurate comparisons.
 
-Methodology
+#Methodology
 
 The study will follow a structured approach to collect, clean, and analyze data.
 
@@ -77,6 +77,22 @@ Compare different models (Decision Tree, Random Forest) to identify the best pre
 Identification of potential correlations between education and happiness levels.
 Insights into whether tertiary education enrollment plays a significant role in happiness.
 Visualization of global trends linking education with life satisfaction.
+
+
+#Hypothesis and Predictions
+
+This study aims to test the following hypotheses regarding the relationship between education level and happiness:
+
+Null Hypothesis (H₀): There is no significant relationship between education level and happiness index. Higher education levels do not significantly impact happiness scores.
+Alternative Hypothesis (H₁): Higher education levels are significantly correlated with higher happiness scores. Countries with better education systems and higher literacy rates tend to have higher happiness levels.
+
+#Predictions
+
+Based on previous research and logical reasoning, the following outcomes are expected:
+
+Countries with higher literacy rates and longer schooling years will have higher happiness scores.
+Tertiary education enrollment will be a strong predictor of happiness, but other factors such as GDP per capita and social support may have stronger correlations.
+Developed nations will show a stronger correlation between education and happiness, while in developing countries, economic factors may play a more dominant role.
 
 
 
