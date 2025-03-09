@@ -3,6 +3,7 @@
 
 
 Education Level and Happiness Index - Project Proposal
+
 Project Overview
 
 This project aims to analyze the relationship between a country's education level and its happiness index to determine whether higher education levels contribute to greater happiness. Using data science techniques, we will investigate whether investment in education correlates with increased life satisfaction. By comparing education-related metrics (literacy rate, average years of schooling, tertiary education enrollment) with happiness scores, this study seeks to uncover patterns and key influencing factors.
@@ -12,6 +13,7 @@ Motivation
 Education is often linked to economic prosperity, but its connection to happiness is less explored. This study can provide insights into how learning contributes to life satisfaction. If a strong correlation is found, governments and policymakers may prioritize education as a key factor for holistic societal development. Additionally, this project provides an opportunity to apply data science skills in real-world analysis, improving statistical and analytical expertise.
 
 Objectives
+
 Investigate the Relationship Between Education and Happiness
 
 Explore whether countries with higher education levels report higher happiness scores.
@@ -31,6 +33,7 @@ World Bank Education Dataset: https://www.kaggle.com/datasets/theworldbank/educa
 Includes literacy rates, mean years of schooling, tertiary education enrollment, and government expenditure on education.
 
 Key Variables in the Dataset
+
 Education-Related Variables
 
 Education Index → Combines mean years of schooling and expected years of schooling.
@@ -46,6 +49,7 @@ Freedom Index → Measures the perceived level of personal freedom.
 Both datasets will be merged using the "Country" field to ensure accurate comparisons.
 
 Methodology
+
 The study will follow a structured approach to collect, clean, and analyze data.
 
 1. Data Collection & Cleaning
