@@ -94,8 +94,13 @@ Countries with higher literacy rates and higher tertiary enrollment rate will ha
 Tertiary education enrollment will be a strong predictor of happiness, but other factors such as GDP per capita and life expectancy may have stronger correlations.
 Developed nations will show a stronger correlation between education and happiness, while in developing countries, economic factors may play a more dominant role.
 
+# Findings 
+1. Tertiary Enrollment Datas
+   
 
 
+
+![tertiary enrollment histogram ](https://github.com/user-attachments/assets/093bcb35-fe55-4da8-b8da-bc60080830d1)
 
 
  
