@@ -38,7 +38,7 @@ Key Variables in the Dataset
 
 Education-Related Variables
 
-- Education Index → Combines mean years of schooling and expected years of schooling.
+
 - Tertiary Enrollment Rate → Percentage of people enrolled in higher education.
 - Adult Literacy Rate → Percentage of adults who can read and write
 
@@ -46,8 +46,8 @@ Happiness-Related Variables
 
 - Happiness Score → Well-being index on a scale of 0 to 10.
 - GDP per Capita → Economic performance indicator.
-- Social Support Index → Measures the strength of community and support systems.
 - Freedom Index → Measures the perceived level of personal freedom.
+- Life Expectancy -> 
 - Both datasets will be merged using the "Country" field to ensure accurate comparisons.
 
 #Methodology
@@ -84,14 +84,14 @@ Visualization of global trends linking education with life satisfaction.
 This study aims to test the following hypotheses regarding the relationship between education level and happiness:
 
 Null Hypothesis (H₀): There is no significant relationship between education level and happiness index. Higher education levels do not significantly impact happiness scores.
-Alternative Hypothesis (H₁): Higher education levels are significantly correlated with higher happiness scores. Countries with better education systems and higher literacy rates tend to have higher happiness levels.
+Alternative Hypothesis (H₁): Higher education levels are significantly correlated with higher happiness scores. Countries with higher tertiary enrollment rate and higher literacy rates tend to have higher happiness levels.
 
 #Predictions
 
 Based on previous research and logical reasoning, the following outcomes are expected:
 
-Countries with higher literacy rates and longer schooling years will have higher happiness scores.
-Tertiary education enrollment will be a strong predictor of happiness, but other factors such as GDP per capita and social support may have stronger correlations.
+Countries with higher literacy rates and higher tertiary enrollment rate will have higher happiness scores.
+Tertiary education enrollment will be a strong predictor of happiness, but other factors such as GDP per capita and life expectancy may have stronger correlations.
 Developed nations will show a stronger correlation between education and happiness, while in developing countries, economic factors may play a more dominant role.
 
 
