@@ -95,12 +95,71 @@ Tertiary education enrollment will be a strong predictor of happiness, but other
 Developed nations will show a stronger correlation between education and happiness, while in developing countries, economic factors may play a more dominant role.
 
 # Findings 
+-Education Variables
 1. Tertiary Enrollment Datas
    
+   The following histogram illustrates the distribution of tertiary enrollment rates across countries in 2017.
+The data displays a right-skewed pattern, suggesting that lower enrollment percentages are more frequent.
+This highlights the inequality in access to higher education, especially between developed and developing nations.
 
 
 
 ![tertiary enrollment histogram ](https://github.com/user-attachments/assets/093bcb35-fe55-4da8-b8da-bc60080830d1)
 
 
- 
+The boxplot displays the distribution of tertiary enrollment percentages across countries in 2017.
+The median enrollment rate is around 50%, with a wide interquartile range, indicating high variability among countries.
+A few outliers above 100% suggest that some countries report tertiary enrollment exceeding the traditional age group, possibly due to lifelong learning or returning students.
+![tertiary box plot](https://github.com/user-attachments/assets/0874fbfa-53e2-4016-879f-af3d385c653f)
+
+
+2.Adult Literacy Rates
+
+ The following histogram shows the distribution of adult literacy rates across countries in 2017.
+The distribution is left-skewed, indicating that higher literacy rates are more common, with many countries scoring above 70–80%.
+This pattern reflects a global trend towards widespread basic education, although a few regions still face significant literacy challenges.
+
+ ![literacy rate histogram](https://github.com/user-attachments/assets/eccdeb52-bd69-41c5-9fbc-ffb99d0635d1)
+
+
+ The boxplot presents the distribution of adult literacy rates across countries in 2017.
+The median literacy rate is around 75–80%, and the interquartile range is relatively narrow, indicating that most countries fall within a similar range.
+A few outliers on the lower end (below 40%) highlight regions where literacy remains a major challenge, emphasizing global inequality in basic education access.
+
+![literacy rate box plot](https://github.com/user-attachments/assets/a65bd8ff-7738-4022-bde5-5a56f882190a)
+
+-Happiness Variables
+
+1.Happiness Scores
+
+The histogram illustrates the distribution of happiness scores across countries in 2017.
+The shape appears approximately normal, with most countries scoring between 5 and 6.5 on the scale.
+This suggests that global well-being levels tend to cluster around the middle, with fewer countries reporting very low or very high happiness.
+
+![happiness score histogram ](https://github.com/user-attachments/assets/1ce2546e-9bd4-4b68-a6c2-fa6e3af1c6cb)
+
+
+This boxplot displays the distribution of happiness scores across countries in 2017.
+The median score is around 5.5, and the data is fairly symmetrical, with most values falling between 4.5 and 6.5.
+The absence of extreme outliers indicates a relatively consistent global trend in well-being levels, without major deviations.
+
+
+
+![happiness box plot](https://github.com/user-attachments/assets/27903a13-f522-479b-8eea-f3194087e0d3)
+
+
+2. GDP per Capita, Life Expectancy and Freedom
+
+   The following histograms illustrate the distributions of GDP per capita, perceived freedom, and life expectancy across countries in 2017.
+All three variables display a right-skewed pattern, suggesting that lower values are more frequent, while higher values are observed in a smaller number of countries.
+This highlights ongoing global disparities in economic resources, personal freedom, and health outcomes.
+
+   ![happiness ve other varibles histogram ](https://github.com/user-attachments/assets/73dda712-8467-4737-b228-16e21d5e255b)
+
+
+The scatter plots below illustrate the relationships between happiness score and three key indicators: GDP per capita, freedom, and life expectancy.
+All three show a positive correlation, meaning that as GDP, freedom, or life expectancy increases, happiness scores also tend to rise.
+Among the three, GDP per capita and life expectancy exhibit a stronger linear trend, suggesting that economic and health-related factors may have a more direct impact on national well-being.
+
+![happiness ve other varibles scatter](https://github.com/user-attachments/assets/81f8bbc9-7896-4620-9a85-3ea1cca886ef)
+
