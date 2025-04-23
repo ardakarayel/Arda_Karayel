@@ -47,7 +47,7 @@ Happiness-Related Variables
 - Happiness Score → Well-being index on a scale of 0 to 10.
 - GDP per Capita → Economic performance indicator.
 - Freedom Index → Measures the perceived level of personal freedom.
-- Life Expectancy -> 
+- Life Expectancy -> Expected average lifespan in a country, reflecting overall health and well-being.
 - Both datasets will be merged using the "Country" field to ensure accurate comparisons.
 
 #Methodology
