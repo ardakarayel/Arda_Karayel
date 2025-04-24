@@ -26,7 +26,7 @@ Apply statistical methods and visualization techniques to identify correlations 
 
 # Datasets
 
-This project will use publicly available datasets from Kaggle:
+This project will use publicly available datasets from Kaggle and World Bank Group:
 
 World Happiness Report Dataset:https://www.kaggle.com/datasets/unsdsn/world-happiness
 Contains global happiness scores, GDP per capita, social support, freedom index, and life expectancy.
