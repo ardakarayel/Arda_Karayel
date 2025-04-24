@@ -1,6 +1,5 @@
-# ===========================
+
 # 1. P-VALUE & PEARSON CORRELATION
-# ===========================
 
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
@@ -53,9 +52,7 @@ for line in lines_enr[5:]:
     except:
         continue
 
-# ===========================
 # 2. PEARSON CORRELATION RESULTS
-# ===========================
 
 def pearson_stats(x, y, label):
     r, p = pearsonr(x, y)
@@ -67,9 +64,7 @@ def pearson_stats(x, y, label):
 pearson_stats(common_enr_scores, common_enr_happy, "Tertiary Enrollment vs Happiness")
 pearson_stats(common_lit_scores, common_lit_happy, "Literacy Rate vs Happiness")
 
-# ===========================
 # 3. SPEARMAN CORRELATION RESULTS
-# ===========================
 
 def spearman_stats(x, y, label):
     r, p = spearmanr(x, y)
