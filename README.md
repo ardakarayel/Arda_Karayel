@@ -31,8 +31,8 @@ This project will use publicly available datasets from Kaggle:
 World Happiness Report Dataset:https://www.kaggle.com/datasets/unsdsn/world-happiness
 Contains global happiness scores, GDP per capita, social support, freedom index, and life expectancy.
 
-World Bank Education Dataset: https://www.kaggle.com/datasets/theworldbank/education-statistics
-Includes literacy rates, mean years of schooling, tertiary education enrollment, and government expenditure on education.
+World Bank Education Dataset: https://data.worldbank.org/indicator/SE.TER.ENRR
+Includes adult literacy rates and tertiary education enrollment rates for countries.
 
 Key Variables in the Dataset
 
