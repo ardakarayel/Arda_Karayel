@@ -34,6 +34,9 @@ Contains global happiness scores, GDP per capita, social support, freedom index,
 World Bank Education Dataset: https://data.worldbank.org/indicator/SE.TER.ENRR
 Includes adult literacy rates and tertiary education enrollment rates for countries.
 
+World Bank Environmental Dataset: https://data.worldbank.org/indicator/AG.LND.FRST.ZS
+Includes forest area data, representing the percentage of land area covered by forests for each country.
+
 Key Variables in the Dataset
 
 Education-Related Variables
@@ -49,6 +52,10 @@ Happiness-Related Variables
 - Freedom Index → Measures the perceived level of personal freedom.
 - Life Expectancy -> Expected average lifespan in a country, reflecting overall health and well-being.
 - Both datasets will be merged using the "Country" field to ensure accurate comparisons.
+
+Environmental Variable
+
+- Forest Area (% of Land Area) → Proportion of land covered by forest, used as an indicator of environmental quality.
 
 # Methodology
 
@@ -69,7 +76,7 @@ Null Hypothesis (H₀): No significant relationship exists between education lev
 Alternative Hypothesis (H₁): Higher education levels are significantly correlated with higher happiness scores.
 Conduct statistical tests (Pearson correlation, regression analysis) to test the hypothesis.
 
-4. Machine Learning (Optional)
+4. Machine Learning 
 Train a linear regression model to predict happiness scores based on education variables.
 Compare different models (Decision Tree, Random Forest) to identify the best predictor.
 
@@ -81,18 +88,25 @@ Visualization of global trends linking education with life satisfaction.
 
 # Hypothesis and Predictions
 
-This study aims to test the following hypotheses regarding the relationship between education level and happiness:
+This study aims to test the following hypotheses regarding the relationship between education level, environmental factors (forest area), and happiness:
 
-Null Hypothesis (H₀): There is no significant relationship between education level and happiness index. Higher education levels do not significantly impact happiness scores.
-Alternative Hypothesis (H₁): Higher education levels are significantly correlated with higher happiness scores. Countries with higher tertiary enrollment rate and higher literacy rates tend to have higher happiness levels.
+Null Hypothesis (H₀):
+There is no significant relationship between education level, forest area, and happiness index.
+Higher education levels and forest coverage do not significantly impact happiness scores.
+
+Alternative Hypothesis (H₁):
+Higher education levels and greater forest area are significantly correlated with higher happiness scores.
+Countries with higher tertiary enrollment rate, higher literacy rates, and greater forest coverage tend to have higher happiness levels.
 
 # Predictions
 
-Based on previous research and logical reasoning, the following outcomes are expected:
+Before conducting any analysis, it is expected that countries with higher levels of education and greater forest coverage will tend to have higher happiness scores. The reasoning behind this is that:
 
-Countries with higher literacy rates and higher tertiary enrollment rate will have higher happiness scores.
-Tertiary education enrollment will be a strong predictor of happiness, but other factors such as GDP per capita and life expectancy may have stronger correlations.
-Developed nations will show a stronger correlation between education and happiness, while in developing countries, economic factors may play a more dominant role.
+Education often contributes to better quality of life, job opportunities, and awareness, which can increase overall life satisfaction.
+
+Similarly, a high percentage of forest area may reflect a cleaner, greener, and healthier environment — something that could enhance well-being and happiness.
+
+Therefore, it is predicted that both educational attainment and environmental richness (as measured by forest area) will show positive correlations with national happiness levels.
 
 # Findings 
 -Education Variables
@@ -163,6 +177,18 @@ Among the three, GDP per capita and life expectancy exhibit a stronger linear tr
 
 ![happiness ve other varibles scatter](https://github.com/user-attachments/assets/81f8bbc9-7896-4620-9a85-3ea1cca886ef) 
 
+-Forest Area (% of land)
+
+ The histogram shows the distribution of forest area (% of land) across all countries in 2017. Most countries have relatively low forest coverage, with a noticeable concentration in the 0–20% range. However, a smaller number of countries exhibit very high forest density, reflected in the right-skewed tail. The KDE curve suggests a multi-modal distribution, indicating regional or environmental clustering.
+
+![Forest histogram](https://github.com/user-attachments/assets/c22e49aa-1a18-4d48-a8ed-016f0f6f7dbc) 
+
+
+The box plot illustrates the spread of forest area percentages across all countries in 2017. The median falls near the center of the interquartile range, suggesting a fairly balanced distribution. The length of the box indicates moderate variability, while the whiskers show a wide range of values. A few outliers may exist beyond the whiskers, representing countries with exceptionally high or low forest coverage.
+
+![forest box plot](https://github.com/user-attachments/assets/d291ab98-6fae-437f-ac82-076eaa33b452)
+
+
 # Statistics
 
 The descriptive statistics highlight a significant variance in tertiary education enrollment rates across countries, with values ranging from under 10% to over 120%. In contrast, adult literacy rates are more uniformly distributed, clustering around 80%. Happiness scores are concentrated around the midpoint (mean = 5.35), reflecting moderate global well-being levels.
@@ -210,6 +236,20 @@ The descriptive statistics highlight a significant variance in tertiary educatio
    
    Standard Deviation : 1.13
 
+- Forest Area Ratio (2017) % 0-100
+ 
+   Count              : 222
+   
+   Mean               : 32.59
+   
+   Median             : 31.18
+   
+   Mode               : 0.0
+   
+   Variance           : 559.32
+   
+   Standard Deviation : 23.65
+
  * p-value and Corelation Coefficients
     
    * Tertiary Enrollment vs Happiness (Pearson Correlation)
@@ -236,6 +276,22 @@ The descriptive statistics highlight a significant variance in tertiary educatio
         
          P-value                    : 1.7093e-01
 
+   * Forest Area vs Happiness Score (Pearson Correlation)
+
+         Correlation Coefficient (r): 0.0957
+
+         P-value                    : 2.7854e-01
+
+   * Forest Area vs Happiness Score (Spearman Correlation)
+
+         Correlation Coefficient (ρ): 0.1037
+    
+         P-value                   : 2.4025e-01
+  
+
+
+   
+
 The correlation between tertiary enrollment and happiness score is both strong and statistically significant, supported by:
 
 Pearson r = 0.6404, p = 3.78e-14
@@ -251,6 +307,14 @@ Pearson r = 0.1199, p = 0.158
 Spearman ρ = 0.1164, p = 0.170
 
 Since both p-values are greater than 0.05, this indicates that literacy rate does not have a statistically significant correlation with happiness.
+
+The relationship between forest area and happiness score appears to be very weak and statistically insignificant, as shown by:
+
+Pearson correlation: r = 0.0957, p = 0.2785
+
+Spearman correlation: ρ = 0.1037, p = 0.2403
+
+Since both p-values are well above 0.05, we cannot conclude any statistically significant correlation. Although the correlation coefficients are slightly positive, the evidence does not support a meaningful relationship between forest coverage and happiness levels across countries.
 
 # Comparison and Correlation Analysis
 
@@ -271,9 +335,14 @@ Since both p-values are greater than 0.05, this indicates that literacy rate doe
 
 ![download ](https://github.com/user-attachments/assets/33adf692-b0b7-4d2e-96d3-1cdbd3db6f07)
 
-  
- 
 
+- Forest Area Ratio vs Happiness Score Comparison
+
+  This bar chart shows the average forest area (% of land) across countries grouped by their happiness score ranges. Countries with higher happiness scores tend to have slightly more forest coverage on average, suggesting a potential link between environmental quality and well-being.
+
+ ![forest vs happiness bar chart](https://github.com/user-attachments/assets/3d5c41c5-2707-4219-bf1e-4ebd76b5b8a1)
+
+ 
 
 
 - Correlation Between Happiness Score and Tertiary Enrollment Rate
@@ -307,9 +376,20 @@ This implies that while literacy may be a foundational indicator of development,
  
  Although the scatter plot shows a slightly upward trend between adult literacy rate and happiness, the correlation is weak and statistically insignificant (r = 0.12, p = 0.158). This suggests that literacy, while crucial for development, does not directly translate into higher national well-being.
 
+ Based on the correlation analysis conducted using Pearson and Spearman methods, we evaluated the relationship between education-related metrics and happiness scores to determine which hypothesis can be accepted.
 
 
-Based on the correlation analysis conducted using Pearson and Spearman methods, we evaluated the relationship between education-related metrics and happiness scores to determine which hypothesis can be accepted.
+
+ - Correlation Between Happiness Score and Forest Area Ratio
+
+ The scatter plot displays the relationship between forest area (% of land) and happiness score across countries in 2017. While the data points are widely scattered, there is a slight upward trend, indicating a potential weak positive correlation between forest coverage and happiness. However, the variability suggests that forest area alone is not a strong predictor of national happiness.
+
+![Forest  x happiness scatter plot](https://github.com/user-attachments/assets/a1895cef-7d00-4d05-997d-8d27b3c07b17)
+
+
+
+
+
 
 # Hypothesis Testing: Education and Happiness
 
@@ -327,7 +407,7 @@ Based on the correlation analysis conducted using Pearson and Spearman methods, 
 
  Since both p-values are **well below 0.05**, we reject the null hypothesis **H₀**.  
  There is a **strong and statistically significant** positive correlation between tertiary education and happiness.  
-➡ **We accept the alternative hypothesis (H₁)** for tertiary enrollment.
+ **We accept the alternative hypothesis (H₁)** for tertiary enrollment.
 
 ---
 
@@ -340,13 +420,28 @@ Based on the correlation analysis conducted using Pearson and Spearman methods, 
  Thus, we **fail to reject the null hypothesis (H₀)** for literacy rate.
 
 ---
+# Hypothesis Testing: Forest Area and Happiness
+
+### Hypothesis Recap:
+ - **H₀ (Null Hypothesis):** There is no significant relationship between forest area and happiness.
+ - **H₁ (Alternative Hypothesis):** Forest area is significantly correlated with happiness scores.
+
+Forest Area:
+- **Pearson r = 0.0957**,**p = 0.2785**
+- **Spearman ρ = 0.1037**,**p = 0.2403**
+
+Both p-values are greater than 0.05, indicating no statistically significant relationship.
+Thus, we fail to reject the null hypothesis (H₀) for forest area.
+
+ We do not accept the alternative hypothesis (H₁) for forest area.
 
 ###  Final Decision:
 
 - **Tertiary Enrollment**: H₀ rejected → education correlates with happiness   
-- **Adult Literacy Rate**: H₀ not rejected → no significant relationship 
+- **Adult Literacy Rate**: H₀ not rejected → no significant relationship
+- **Forest Area**: H₀ not rejected → no significant relationship
 
-Overall, this supports the hypothesis that **higher access to advanced education** contributes meaningfully to national happiness levels.
+Overall, this supports the hypothesis that **higher access to advanced education** contributes meaningfully to national happiness levels. Also, this suggests that environmental features like forest coverage may have limited direct influence on happiness scores compared to factors such as access to higher education.
 
 
 
