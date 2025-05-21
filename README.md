@@ -6,11 +6,17 @@ Education Level and Happiness Index - Project Proposal
 
 # Project Overview
 
-This project aims to analyze the relationship between a country's education level and its happiness index to determine whether higher education levels contribute to greater happiness. Using data science techniques, we will investigate whether investment in education correlates with increased life satisfaction. By comparing education-related metrics (literacy rate, average years of schooling, tertiary education enrollment) with happiness scores, this study seeks to uncover patterns and key influencing factors.
+This project aims to analyze the relationship between a country’s education level, environmental quality, and its happiness index. The goal is to determine whether higher education levels and better environmental conditions contribute to greater happiness. Using data science techniques, we investigate whether investment in education and improvements in environmental factors—such as forest coverage and air pollution—correlate with increased life satisfaction. By comparing education-related metrics (literacy rate, tertiary education enrollment) and environmental indicators (forest area, air pollution) with happiness scores, the study seeks to uncover patterns and key influencing factors.
 
 # Motivation
 
-Education is often linked to economic prosperity, but its connection to happiness is less explored. This study can provide insights into how learning contributes to life satisfaction. If a strong correlation is found, governments and policymakers may prioritize education as a key factor for holistic societal development. Additionally, this project provides an opportunity to apply data science skills in real-world analysis, improving statistical and analytical expertise.
+Investigate the relationship between education, environmental quality, and happiness.
+
+Explore whether countries with higher tertiary education enrollment and cleaner environments report higher happiness scores.
+
+Compare the influence of educational variables (literacy rate, tertiary enrollment) and environmental factors (forest area, air pollution) on happiness.
+
+Apply statistical and machine learning methods to identify patterns and correlations among education, environment, and well-being.
 
 # Objectives
 
@@ -120,9 +126,9 @@ H₁: Higher air pollution is associated with lower happiness scores.
 
 # Predictions
 
-It is expected that countries with higher education levels and better environmental conditions (greater forest coverage and lower air pollution) will tend to have higher happiness scores.
+It is expected that countries with higher education levels and better environmental conditions—specifically greater forest coverage and lower air pollution (PM2.5)—will tend to have higher happiness scores.
 
-Tertiary education is anticipated to show the strongest positive correlation with happiness, while air pollution is expected to have a negative impact. Forest area may show a mild positive effect as an indicator of environmental well-being.
+Among all variables, tertiary education is anticipated to show the strongest positive correlation with happiness. In contrast, air pollution is expected to have a moderate to strong negative impact, as higher pollution levels are likely associated with lower well-being. Forest area may have a mild positive effect as an indicator of environmental quality.
 
 # Findings 
 -Education Variables
@@ -512,7 +518,7 @@ Thus, we reject the null hypothesis (H₀) and conclude that there is a signific
 - **Tertiary Enrollment**: H₀ rejected → education correlates with happiness   
 - **Adult Literacy Rate**: H₀ not rejected → no significant relationship
 - **Forest Area**: H₀ not rejected → no significant relationship
-- **Air Pollution (PM2.5)**: H₀ rejected → higher air pollution correlates with lower happiness
+- **Air Pollution**: H₀ rejected → higher air pollution correlates with lower happiness
 
 Overall, this supports the hypothesis that higher access to advanced education and better environmental quality (specifically air cleanliness) contribute meaningfully to national happiness levels. In contrast, general forest coverage and basic literacy appear to have limited direct influence on happiness scores.
 
