@@ -1,8 +1,7 @@
 # DSA 210 PROJECT Arda_Karayel
 
 
-
-Education Level and Happiness Index - Project Proposal
+Education and Environmental Factors in Relation to National Happiness – Project Proposal
 
 # Project Overview
 
