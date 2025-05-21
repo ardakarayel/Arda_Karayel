@@ -37,6 +37,9 @@ Includes adult literacy rates and tertiary education enrollment rates for countr
 World Bank Environmental Dataset: https://data.worldbank.org/indicator/AG.LND.FRST.ZS
 Includes forest area data, representing the percentage of land area covered by forests for each country.
 
+World Bank Environmental Dataset: https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3
+Includes air pollution data, representing the oercentage of air pollution of countires.
+
 Key Variables in the Dataset
 
 Education-Related Variables
@@ -56,6 +59,7 @@ Happiness-Related Variables
 Environmental Variable
 
 - Forest Area (% of Land Area) → Proportion of land covered by forest, used as an indicator of environmental quality.
+- Air Pollution → Represents the average level of harmful fine particles in the air.
 
 # Methodology
 
@@ -86,27 +90,39 @@ Insights into whether tertiary education enrollment plays a significant role in 
 Visualization of global trends linking education with life satisfaction.
 
 
-# Hypothesis and Predictions
+# Hypothesis 
 
-This study aims to test the following hypotheses regarding the relationship between education level, environmental factors (forest area), and happiness:
+Main hypothesis
 
-Null Hypothesis (H₀):
-There is no significant relationship between education level, forest area, and happiness index.
-Higher education levels and forest coverage do not significantly impact happiness scores.
+H₀: There is no statistically significant relationship between education level, environmental quality, and national happiness scores.
 
-Alternative Hypothesis (H₁):
-Higher education levels and greater forest area are significantly correlated with higher happiness scores.
-Countries with higher tertiary enrollment rate, higher literacy rates, and greater forest coverage tend to have higher happiness levels.
+H₁: Education and environmental quality are significantly associated with national happiness scores.
+
+Sub-Hypotheses 
+
+- Education Hypothesis
+
+H₀: There is no significant relationship between education level and happiness.
+
+H₁: Higher education levels (tertiary enrollment) are associated with higher happiness.
+
+- Forest Area Hypothesis
+
+H₀: Forest area coverage is not related to happiness.
+
+H₁: Countries with greater forest coverage report higher happiness.
+
+- Air Pollution Hypothesis
+
+H₀: Air pollution levels (PM2.5) have no significant impact on happiness.
+
+H₁: Higher air pollution is associated with lower happiness scores.
 
 # Predictions
 
-Before conducting any analysis, it is expected that countries with higher levels of education and greater forest coverage will tend to have higher happiness scores. The reasoning behind this is that:
+It is expected that countries with higher education levels and better environmental conditions (greater forest coverage and lower air pollution) will tend to have higher happiness scores.
 
-Education often contributes to better quality of life, job opportunities, and awareness, which can increase overall life satisfaction.
-
-Similarly, a high percentage of forest area may reflect a cleaner, greener, and healthier environment — something that could enhance well-being and happiness.
-
-Therefore, it is predicted that both educational attainment and environmental richness (as measured by forest area) will show positive correlations with national happiness levels.
+Tertiary education is anticipated to show the strongest positive correlation with happiness, while air pollution is expected to have a negative impact. Forest area may show a mild positive effect as an indicator of environmental well-being.
 
 # Findings 
 -Education Variables
@@ -188,6 +204,30 @@ The box plot illustrates the spread of forest area percentages across all countr
 
 ![forest box plot](https://github.com/user-attachments/assets/d291ab98-6fae-437f-ac82-076eaa33b452)
 
+-Air Pollution
+
+The histogram shows that most countries have relatively low to moderate air pollution levels, while a smaller group experiences much higher exposure.
+
+The distribution is clearly right-skewed, indicating that only a few countries suffer from very high pollution, while the majority remain in a safer range.
+
+![histogram air pollution](https://github.com/user-attachments/assets/4cdf3a5d-db82-43d4-a779-de8564b4dbcf)
+
+This boxplot displays the distribution of PM2.5 air pollution levels across three groups: Low, Medium, and High.
+
+As expected, each group shows increasing concentration ranges, with the High pollution group having the widest and most elevated values. This visual confirms a clear separation between pollution levels among countries in 2017.
+
+![box plot air plootuion](https://github.com/user-attachments/assets/a7ce5b85-8b4d-435a-91e0-28ab6aa95fa6)
+
+This map illustrates global air pollution levels in 2017, measured by PM2.5 concentration.
+
+Darker red regions represent countries with the highest pollution levels, such as India, Pakistan, and several North African and Middle Eastern countries.
+
+Lighter areas (especially in Europe, Oceania, and parts of South America) indicate cleaner air and lower PM2.5 exposure.
+
+The data clearly highlights significant regional differences in air quality across the globe.
+
+![air pollution heatmap ](https://github.com/user-attachments/assets/3a3077f9-bfe8-4fdd-aaba-dad999105eb7)
+
 
 # Statistics
 
@@ -249,6 +289,20 @@ The descriptive statistics highlight a significant variance in tertiary educatio
    Variance           : 559.32
    
    Standard Deviation : 23.65
+  
+- Air pollution Ratio (2017) % 0-100
+  
+  Count : 248
+  
+  Mean : 27.06
+  
+  Median : 21.86
+  
+  Mode : 40.78
+  
+  Variance : 300.03
+  
+  Standard Deviation : 17.32
 
  * p-value and Corelation Coefficients
     
@@ -287,34 +341,32 @@ The descriptive statistics highlight a significant variance in tertiary educatio
          Correlation Coefficient (ρ): 0.1037
     
          P-value                   : 2.4025e-01
+     
+   * Air Pollution vs Happiness Score (Pearson Correlation)
+
+         Correlation Coefficient (ρ): -0.4664
+ 
+         P-value                   : 0.0
+  
+   * Air Pollution vs Happiness Score (Spearman Correlation)
+
+         Correlation Coefficient (ρ): -0.5832
+ 
+         P-value                   : 0.0
   
 
+   The study explored how various factors—education level, environmental quality, and air pollution—relate to national happiness scores using both Pearson and Spearman correlation methods.
 
-   
+Tertiary enrollment rate shows a strong and statistically significant positive correlation with happiness (r ≈ 0.64, p < 0.001), suggesting that access to higher education is a key contributor to national well-being.
 
-The correlation between tertiary enrollment and happiness score is both strong and statistically significant, supported by:
+Adult literacy rate, on the other hand, does not demonstrate a meaningful relationship with happiness (r ≈ 0.12, p > 0.15), indicating that basic literacy alone may not be a sufficient predictor of well-being.
 
-Pearson r = 0.6404, p = 3.78e-14
+Forest area (%) shows a very weak and statistically insignificant correlation with happiness (r ≈ 0.10, p > 0.2), suggesting that the presence of forested land may not directly influence happiness scores at the national level.
 
-Spearman ρ = 0.6491, p = 1.30e-14
+Air pollution displays a moderate negative and statistically significant correlation with happiness (r = -0.47 to -0.58, p ≈ 0.000), indicating that higher levels of air pollution are consistently associated with lower happiness scores.
 
-These extremely low p-values (p < 0.001) confirm that the relationship is unlikely due to chance.
-
-On the other hand, the relationship between adult literacy and happiness is:
-
-Pearson r = 0.1199, p = 0.158
-
-Spearman ρ = 0.1164, p = 0.170
-
-Since both p-values are greater than 0.05, this indicates that literacy rate does not have a statistically significant correlation with happiness.
-
-The relationship between forest area and happiness score appears to be very weak and statistically insignificant, as shown by:
-
-Pearson correlation: r = 0.0957, p = 0.2785
-
-Spearman correlation: ρ = 0.1037, p = 0.2403
-
-Since both p-values are well above 0.05, we cannot conclude any statistically significant correlation. Although the correlation coefficients are slightly positive, the evidence does not support a meaningful relationship between forest coverage and happiness levels across countries.
+ Interpretation:
+These results highlight that tertiary education access and clean environmental conditions (especially air quality) are more influential on happiness than other education or environmental indicators such as literacy or forest coverage.
 
 # Comparison and Correlation Analysis
 
@@ -386,8 +438,12 @@ This implies that while literacy may be a foundational indicator of development,
 
 ![Forest  x happiness scatter plot](https://github.com/user-attachments/assets/a1895cef-7d00-4d05-997d-8d27b3c07b17)
 
+- Correlation Between Happiness Score and Air Pollution Ratio
+
+The scatter plot displays the relationship between air pollution levels (PM2.5) and happiness scores across countries in 2017. The data points suggest a downward trend, indicating a moderate negative correlation between air pollution and happiness. Countries with higher PM2.5 levels generally report lower happiness scores. However, the dispersion of the points shows that air pollution alone may not fully explain variations in happiness across nations.
 
 
+![air pollutions vs happiness scatter plot](https://github.com/user-attachments/assets/4fdb7979-7663-480b-92b0-46311676dd73)
 
 
 
@@ -434,14 +490,31 @@ Both p-values are greater than 0.05, indicating no statistically significant rel
 Thus, we fail to reject the null hypothesis (H₀) for forest area.
 
  We do not accept the alternative hypothesis (H₁) for forest area.
+---
+# Hypothesis Testing: Air Pollution and Happiness
+
+### Hypothesis Recap:
+- **H₀ (Null Hypothesis):*** There is no significant relationship between air pollution (PM2.5) and happiness.
+- **H₁ (Alternative Hypothesis):** Air pollution is significantly correlated with happiness scores.
+
+Air Pollution:
+
+- **Pearson r = -0.4664, p = 0.0000**
+- **Spearman ρ = -0.5832, p = 0.0000**
+
+Both p-values are well below 0.05, indicating a statistically significant relationship between air pollution and happiness scores.
+Thus, we reject the null hypothesis (H₀) and conclude that there is a significant negative association.
+
+ We accept the alternative hypothesis (H₁) for air pollution.
 
 ###  Final Decision:
 
 - **Tertiary Enrollment**: H₀ rejected → education correlates with happiness   
 - **Adult Literacy Rate**: H₀ not rejected → no significant relationship
 - **Forest Area**: H₀ not rejected → no significant relationship
+- **Air Pollution (PM2.5)**: H₀ rejected → higher air pollution correlates with lower happiness
 
-Overall, this supports the hypothesis that **higher access to advanced education** contributes meaningfully to national happiness levels. Also, this suggests that environmental features like forest coverage may have limited direct influence on happiness scores compared to factors such as access to higher education.
+Overall, this supports the hypothesis that higher access to advanced education and better environmental quality (specifically air cleanliness) contribute meaningfully to national happiness levels. In contrast, general forest coverage and basic literacy appear to have limited direct influence on happiness scores.
 
 
 
