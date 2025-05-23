@@ -233,6 +233,26 @@ The data clearly highlights significant regional differences in air quality acro
 
 ![air pollution heatmap ](https://github.com/user-attachments/assets/3a3077f9-bfe8-4fdd-aaba-dad999105eb7)
 
+- Arable Land
+
+  The distribution of arable land percentage in 2017 is heavily right-skewed, with the majority of countries falling below 15%. Only a few countries possess significantly higher percentages, exceeding 40%. This highlights the unequal global distribution of arable land and suggests that transformation may be necessary before using this variable in machine learning models.
+  
+![histogram](https://github.com/user-attachments/assets/fcbad3ac-c244-404a-9aa2-4c9224548300)
+
+The boxplot shows that most countries had arable land percentages between approximately 5% and 20% in 2017, with a median around 10%. The presence of multiple outliers beyond 40% indicates that a small number of countries possess significantly higher proportions of arable land. 
+
+![box plot](https://github.com/user-attachments/assets/5ce1a3c6-0baa-450d-a717-2eaf7a0de668)
+
+- Coastline Ratio
+ 
+  The distribution of coastline-to-area ratios in 2017 is highly skewed to the right, with the vast majority of countries having a ratio below 10%. This indicates that most countries have relatively little coastline compared to their land area. However, a small number of countries—mostly small island nations—have extremely high ratios, pushing the distribution into a long tail. This imbalance suggests that the raw variable may require transformation before being used in analytical or machine learning contexts.
+  
+![histogram](https://github.com/user-attachments/assets/a8ad3959-9348-4d82-bd39-1ad18796eeb4)
+
+The pie chart shows that nearly half of all countries (46.7%) have a coastline-to-area ratio below 10%, indicating that they are either landlocked or have very limited coastal access. As the ratio increases, the number of countries in each category declines significantly. Only 5.7% of countries fall into the highest range (75–100%), highlighting that extensive coastlines relative to land area are rare and often characteristic of small island nations. This visual emphasizes the highly uneven global distribution of coastal access.
+
+![pie char](https://github.com/user-attachments/assets/16f558ca-f88a-4b6a-aa18-e5c331888db6)
+
 
 # Statistics
 
@@ -309,6 +329,34 @@ The descriptive statistics highlight a significant variance in tertiary educatio
   
   Standard Deviation : 17.32
 
+ - Arable Land Ratio % 0-100
+    
+  Count : 255
+ 
+  Mean : 13.68
+ 
+  Median : 10.08
+ 
+  Mode : 2.86
+ 
+  Variance : 167.22
+ 
+  Standard Deviation : 12.93
+
+- Coastline to Area Ratio  % 0–100
+  
+   Count : 235
+  
+   Mean : 26.74
+  
+   Median : 0.82
+  
+   Mode : 0.00
+  
+   Variance : 8235.38
+
+   Standard Deviation : 90.75
+
  * p-value and Corelation Coefficients
     
    * Tertiary Enrollment vs Happiness (Pearson Correlation)
@@ -358,7 +406,18 @@ The descriptive statistics highlight a significant variance in tertiary educatio
          Correlation Coefficient (ρ): -0.5832
  
          P-value                   : 0.0
-  
+     
+   * Arable Land vs Happiness Score (Pearson Correlation)
+ 
+       Correlation Coefficient (r): -0.1380
+     
+       P-value                    : 0.1117
+
+   * Arable Land vs Happiness Score (Spearman Correlation)
+     
+      Correlation Coefficient (ρ): -0.1371
+     
+      P-value                    : 0.1141  
 
    The study explored how various factors—education level, environmental quality, and air pollution—relate to national happiness scores using both Pearson and Spearman correlation methods.
 
