@@ -409,28 +409,32 @@ The descriptive statistics highlight a significant variance in tertiary educatio
      
    * Arable Land vs Happiness Score (Pearson Correlation)
  
-       Correlation Coefficient (r): -0.1380
+         Correlation Coefficient (r): -0.1380
      
-       P-value                    : 0.1117
+         P-value                    : 0.1117
 
    * Arable Land vs Happiness Score (Spearman Correlation)
      
-      Correlation Coefficient (ρ): -0.1371
+        Correlation Coefficient (ρ): -0.1371
      
-      P-value                    : 0.1141  
+        P-value                    : 0.1141  
 
-   The study explored how various factors—education level, environmental quality, and air pollution—relate to national happiness scores using both Pearson and Spearman correlation methods.
+   The study examined how several factors—including education, land use, and environmental conditions—relate to national happiness scores using both Pearson and Spearman correlation methods.
 
-Tertiary enrollment rate shows a strong and statistically significant positive correlation with happiness (r ≈ 0.64, p < 0.001), suggesting that access to higher education is a key contributor to national well-being.
+Tertiary enrollment rate exhibits a strong and statistically significant positive correlation with happiness (r ≈ 0.64, p < 0.001), supporting the idea that access to higher education is a key driver of national well-being.
 
-Adult literacy rate, on the other hand, does not demonstrate a meaningful relationship with happiness (r ≈ 0.12, p > 0.15), indicating that basic literacy alone may not be a sufficient predictor of well-being.
+In contrast, adult literacy rate shows only a weak and statistically insignificant correlation (r ≈ 0.12, p > 0.15), suggesting that while basic education is widespread, it may not alone predict higher life satisfaction.
 
-Forest area (%) shows a very weak and statistically insignificant correlation with happiness (r ≈ 0.10, p > 0.2), suggesting that the presence of forested land may not directly influence happiness scores at the national level.
+Forest area percentage shows a very weak and statistically insignificant relationship with happiness (r ≈ 0.10, p > 0.2), indicating that forest coverage, though environmentally valuable, may not directly impact subjective well-being on a national scale.
 
-Air pollution displays a moderate negative and statistically significant correlation with happiness (r = -0.47 to -0.58, p ≈ 0.000), indicating that higher levels of air pollution are consistently associated with lower happiness scores.
+Air pollution ratio stands out with a moderate and statistically significant negative correlation with happiness (r = -0.47 to -0.58, p ≈ 0.000), highlighting the importance of clean air as a consistent and measurable factor affecting people's quality of life.
 
- Interpretation:
-These results highlight that tertiary education access and clean environmental conditions (especially air quality) are more influential on happiness than other education or environmental indicators such as literacy or forest coverage.
+Arable land ratio shows a weak and negative but statistically insignificant correlation (r ≈ -0.14, p > 0.1), implying that agricultural capacity may be more relevant for economic or food security concerns rather than immediate happiness.
+
+Interestingly, the coastline-to-area ratio, after transformation, demonstrates a moderate and statistically significant positive correlation with happiness (r ≈ 0.36–0.42, p < 0.001), suggesting that proximity to coastlines might contribute to well-being through channels like recreation, climate, and economic opportunities.
+
+Interpretation:
+Overall, the results suggest that access to higher education, clean air, and coastal environments are more influential on happiness levels than broader geographic or structural indicators such as land use or literacy. These findings may guide policymakers toward interventions that prioritize environmental quality and educational access as key components of national well-being.
 
 # Comparison and Correlation Analysis
 
@@ -457,8 +461,20 @@ These results highlight that tertiary education access and clean environmental c
   This bar chart shows the average forest area (% of land) across countries grouped by their happiness score ranges. Countries with higher happiness scores tend to have slightly more forest coverage on average, suggesting a potential link between environmental quality and well-being.
 
  ![forest vs happiness bar chart](https://github.com/user-attachments/assets/3d5c41c5-2707-4219-bf1e-4ebd76b5b8a1)
-
  
+
+ - Coastline Ratio vs Happiness Score Comparison 
+ 
+ The bar chart shows that average happiness scores tend to increase with higher coastline-to-area ratios. Countries with minimal coastline (0–1%) have the lowest average happiness, while those in the 25–100% range show the highest scores. This suggests a positive association between coastal access and national well-being.
+![coast vs happy bar chart](https://github.com/user-attachments/assets/1a1f923b-85e4-49ca-9ba4-ca96ecf28246)
+
+- Arable Land Ratio vs Happiness Score Comparison
+  
+  The bar chart shows no clear trend between arable land percentage and average happiness scores.
+All three groups (low, medium, high) have similar values, indicating that arable land is not strongly linked to well-being.
+This aligns with the correlation results, where both Pearson and Spearman coefficients were weak and p-values above 0.1, confirming the relationship is statistically insignificant.
+
+  ![happy x arable bar chart](https://github.com/user-attachments/assets/b5f77c78-ec1b-4ef4-bd2a-938c8bc8872d)
 
 
 - Correlation Between Happiness Score and Tertiary Enrollment Rate
@@ -509,6 +525,17 @@ The scatter plot displays the relationship between air pollution levels (PM2.5) 
 
 ![air pollutions vs happiness scatter plot](https://github.com/user-attachments/assets/4fdb7979-7663-480b-92b0-46311676dd73)
 
+- Correlation Between Happiness Score and Arable Land Ratio
+  
+The scatter plot shows no clear trend between arable land (log + scaled) and happiness score. The data points are widely dispersed, and there is no visible upward or downward pattern. This suggests that the percentage of arable land in a country is not strongly associated with national happiness levels.
+
+![scatter](https://github.com/user-attachments/assets/441e10a2-e90c-4e97-984a-354c9155f9b3)
+
+-  Correlation Between Happiness Score and Arable Land Ratio
+  
+The scatter plot suggests a positive relationship between coastline ratio (log + scaled) and happiness score. While most countries cluster around lower coastline values, those with higher coastline-to-area ratios generally tend to have higher happiness scores. This pattern supports the idea that greater coastal access may be associated with improved well-being, possibly due to economic, environmental, or lifestyle factors.
+
+  ![SCATTER](https://github.com/user-attachments/assets/7052e579-1ad0-464d-84d4-e654f084ce42)
 
 
 # Hypothesis Testing: Education and Happiness
@@ -558,7 +585,7 @@ Thus, we fail to reject the null hypothesis (H₀) for forest area.
 # Hypothesis Testing: Air Pollution and Happiness
 
 ### Hypothesis Recap:
-- **H₀ (Null Hypothesis):*** There is no significant relationship between air pollution (PM2.5) and happiness.
+- **H₀ (Null Hypothesis):** There is no significant relationship between air pollution (PM2.5) and happiness.
 - **H₁ (Alternative Hypothesis):** Air pollution is significantly correlated with happiness scores.
 
 Air Pollution:
@@ -570,6 +597,42 @@ Both p-values are well below 0.05, indicating a statistically significant relati
 Thus, we reject the null hypothesis (H₀) and conclude that there is a significant negative association.
 
  We accept the alternative hypothesis (H₁) for air pollution.
+---
+
+# Hypothesis Testing: Arable Land and Happiness
+
+### Hypothesis Recap:
+
+- **H₀ (Null Hypothesis):** There is no significant relationship between arable land percentage and happiness.
+
+- **H₁ (Alternative Hypothesis):** Arable land is significantly correlated with happiness scores.
+
+ Arable land
+- **Pearson r = -0.1380, p = 0.1117**
+- **Spearman ρ = -0.1371, p = 0.1141**
+
+Both p-values are greater than 0.05, indicating that the relationship is not statistically significant.
+We fail to reject the null hypothesis.
+There is no sufficient evidence to support a significant correlation between arable land and happiness.
+
+---
+
+# Hypothesis Testing: Coastline Ratio and Happiness
+### Hypothesis Recap:
+
+- **H₀ (Null Hypothesis):** There is no significant relationship between coastline ratio and happiness.
+
+- **H₁ (Alternative Hypothesis):** Coastline ratio is significantly correlated with happiness scores.
+
+Results:
+ Coastline
+ 
+- **Pearson r = 0.3608, p = 0.00001**
+- **Spearman ρ = 0.4206, p = 0.00000**
+
+Both p-values are well below 0.05, indicating a statistically significant positive relationship.
+We reject the null hypothesis.
+There is strong evidence that greater coastline access is positively associated with happiness.
 
 ###  Final Decision:
 
@@ -577,10 +640,12 @@ Thus, we reject the null hypothesis (H₀) and conclude that there is a signific
 - **Adult Literacy Rate**: H₀ not rejected → no significant relationship
 - **Forest Area**: H₀ not rejected → no significant relationship
 - **Air Pollution**: H₀ rejected → higher air pollution correlates with lower happiness
+- **Arable Land**: H₀ not rejected → no significant relationship
+- **Coastline Ratio**: H₀ rejected → greater coastal access correlates with higher happiness
 
-Overall, this supports the hypothesis that higher access to advanced education and better environmental quality (specifically air cleanliness) contribute meaningfully to national happiness levels. In contrast, general forest coverage and basic literacy appear to have limited direct influence on happiness scores.
+Overall, these results support the hypothesis that higher access to advanced education, clean air, and coastal environments are associated with greater national happiness. In contrast, basic literacy, forest coverage, and agricultural land appear to have limited direct influence on happiness scores at the global level.
 
 
-
+# Machine Learninng Tecniques
 
 
