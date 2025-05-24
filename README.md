@@ -5,29 +5,34 @@ Education and Environmental Factors in Relation to National Happiness – Projec
 
 # Project Overview
 
-This project aims to analyze the relationship between a country’s education level, environmental quality, and its happiness index. The goal is to determine whether higher education levels and better environmental conditions contribute to greater happiness. Using data science techniques, we investigate whether investment in education and improvements in environmental factors—such as forest coverage and air pollution—correlate with increased life satisfaction. By comparing education-related metrics (literacy rate, tertiary education enrollment) and environmental indicators (forest area, air pollution) with happiness scores, the study seeks to uncover patterns and key influencing factors.
+This project aims to analyze the relationship between a country’s education level, environmental quality, and its happiness index. The objective is to determine whether factors such as higher education and improved environmental conditions are associated with greater national well-being.
+
+Using data science techniques, the study explores how tertiary education enrollment, air pollution, forest area, coastline-to-area ratio, and arable land percentage relate to happiness scores across countries.
+
+By comparing these indicators with annual happiness data, the project seeks to uncover consistent patterns and key drivers of life satisfaction, providing insights into how educational and environmental investments may contribute to societal happiness.
 
 # Motivation
 
 Investigate the relationship between education, environmental quality, and happiness.
 
-Explore whether countries with higher tertiary education enrollment and cleaner environments report higher happiness scores.
+Explore whether countries with higher tertiary education enrollment, better environmental indicators (forest area, air quality), and geographical advantages (coastline ratio, arable land) report higher happiness scores.
 
-Compare the influence of educational variables (literacy rate, tertiary enrollment) and environmental factors (forest area, air pollution) on happiness.
+Apply statistical and machine learning methods to identify key patterns and correlations among these factors and overall well-being.
 
-Apply statistical and machine learning methods to identify patterns and correlations among education, environment, and well-being.
 
 # Objectives
 
-Investigate the Relationship Between Education and Happiness
+Investigate the Relationship Between Education, Environment, and Happiness
 
-Explore whether countries with higher education levels report higher happiness scores.
+Explore whether countries with higher education levels and better environmental conditions report higher happiness scores.
+
 Identify Key Contributing Factors
 
-Compare the impact of education with other factors such as GDP per capita, social support, and life expectancy.
+Compare the influence of education (tertiary enrollment) and environmental indicators (forest area, air pollution, coastline ratio, arable land) on happiness.
+
 Utilize Data Science Techniques
 
-Apply statistical methods and visualization techniques to identify correlations between education and happiness.
+Apply statistical analysis and machine learning methods to uncover patterns and correlations among these variables and happiness scores.
 
 # Datasets
 
@@ -44,6 +49,13 @@ Includes forest area data, representing the percentage of land area covered by f
 
 World Bank Environmental Dataset: https://data.worldbank.org/indicator/EN.ATM.PM25.MC.M3
 Includes air pollution data, representing the oercentage of air pollution of countires.
+
+World Bank Environmental Dataset: https://data.worldbank.org/indicator/AG.LND.ARBL.ZS 
+Provides the percentage of land that is arable and suitable for agriculture.
+
+Country Coastline Dataset: https://github.com/LSYS/country-coastline-distance
+Provides the coastline-to-area ratio for each country, derived from CIA World Factbook and World Resources Institute data.
+Used as a geographic feature to evaluate the impact of natural access and location on happiness levels.
 
 Key Variables in the Dataset
 
@@ -64,7 +76,12 @@ Happiness-Related Variables
 Environmental Variable
 
 - Forest Area (% of Land Area) → Proportion of land covered by forest, used as an indicator of environmental quality.
-- Air Pollution → Represents the average level of harmful fine particles in the air.
+
+- Air Pollution → Represents the average level of harmful fine particles (PM2.5) in the air; higher values indicate worse air quality.
+
+- Coastline Ratio → Ratio of a country's coastline length to its land area; considered as a proxy for access to natural resources, climate, and recreational benefits.
+
+- Arable Land (% of Land Area) → Proportion of land suitable for agriculture; used as an indicator of sustainable land use and food security.
 
 # Methodology
 
@@ -103,31 +120,12 @@ H₀: There is no statistically significant relationship between education level
 
 H₁: Education and environmental quality are significantly associated with national happiness scores.
 
-Sub-Hypotheses 
-
-- Education Hypothesis
-
-H₀: There is no significant relationship between education level and happiness.
-
-H₁: Higher education levels (tertiary enrollment) are associated with higher happiness.
-
-- Forest Area Hypothesis
-
-H₀: Forest area coverage is not related to happiness.
-
-H₁: Countries with greater forest coverage report higher happiness.
-
-- Air Pollution Hypothesis
-
-H₀: Air pollution levels (PM2.5) have no significant impact on happiness.
-
-H₁: Higher air pollution is associated with lower happiness scores.
 
 # Predictions
 
-It is expected that countries with higher education levels and better environmental conditions—specifically greater forest coverage and lower air pollution (PM2.5)—will tend to have higher happiness scores.
+It is expected that countries with higher education levels and better environmental conditions—specifically greater forest coverage, lower air pollution (PM2.5), higher coastline-to-area ratios, and more arable land—will tend to have higher happiness scores.
 
-Among all variables, tertiary education is anticipated to show the strongest positive correlation with happiness. In contrast, air pollution is expected to have a moderate to strong negative impact, as higher pollution levels are likely associated with lower well-being. Forest area may have a mild positive effect as an indicator of environmental quality.
+Among all variables, tertiary education is anticipated to show the strongest positive correlation with happiness. Air pollution is expected to have a moderate to strong negative impact, while forest area and arable land may show mild positive effects. Coastline ratio is also expected to have a small positive influence, reflecting geographic and lifestyle advantages.
 
 # Findings 
 -Education Variables
@@ -531,7 +529,7 @@ The scatter plot shows no clear trend between arable land (log + scaled) and hap
 
 ![scatter](https://github.com/user-attachments/assets/441e10a2-e90c-4e97-984a-354c9155f9b3)
 
--  Correlation Between Happiness Score and Arable Land Ratio
+-  Correlation Between Happiness Score and Coastline Ratio
   
 The scatter plot suggests a positive relationship between coastline ratio (log + scaled) and happiness score. While most countries cluster around lower coastline values, those with higher coastline-to-area ratios generally tend to have higher happiness scores. This pattern supports the idea that greater coastal access may be associated with improved well-being, possibly due to economic, environmental, or lifestyle factors.
 
@@ -607,7 +605,8 @@ Thus, we reject the null hypothesis (H₀) and conclude that there is a signific
 
 - **H₁ (Alternative Hypothesis):** Arable land is significantly correlated with happiness scores.
 
- Arable land
+ Arable land:
+ 
 - **Pearson r = -0.1380, p = 0.1117**
 - **Spearman ρ = -0.1371, p = 0.1141**
 
@@ -624,8 +623,7 @@ There is no sufficient evidence to support a significant correlation between ara
 
 - **H₁ (Alternative Hypothesis):** Coastline ratio is significantly correlated with happiness scores.
 
-Results:
- Coastline
+Coastline:
  
 - **Pearson r = 0.3608, p = 0.00001**
 - **Spearman ρ = 0.4206, p = 0.00000**
@@ -648,17 +646,47 @@ Overall, these results support the hypothesis that higher access to advanced edu
 
 # Machine Learning Tecniques
 
-- Regression: Predicting Step Count
+Objective:
+The goal of this analysis was to predict Happiness Scores based on multiple country-level indicators:
 
-Objective: The goal of this analysis was to predict step counts based on menstrual phases, flights climbed, and walking/running distance using a Random Forest Regression model.
+Tertiary Enrollment
+
+Air Pollution
+
+Forest Land Ratio
+
+Coastline-to-Area Ratio
+
+Arable Land Percentage
 
 Results Overview:
 
-RMSE (Root Mean Squared Error): 320.95, indicating the average deviation of predicted values from actual values in terms of step counts.
+Linear Regression:
 
-MAE (Mean Absolute Error): 219.14, which reflects the average absolute difference between predicted and actual values.
+MSE: 1.18
 
-Interpretation: These metrics demonstrate that the regression model performs reasonably well, with predictions closely aligning with actual step counts.
+R²: 0.03
+
+→ The model struggles to capture the relationship; results are barely better than a constant average prediction.
+
+Decision Tree Regression:
+
+MSE: 0.34
+
+R²: 0.72
+
+→ Captures non-linear patterns well. Performance is strong, with predictions closely aligned with actual scores.
+
+Random Forest Regression:
+
+MSE: 0.35
+
+R²: 0.71
+
+→ Similar to Decision Tree. Robust and performs well, though may be slightly overfitting flat regions due to discrete splits.
+
+Interpretation:
+Among the models tested, Decision Tree and Random Forest perform significantly better than Linear Regression. This suggests that the relationship between country indicators and happiness is non-linear and complex, benefiting from tree-based models that handle interactions and non-linear boundaries effectively.
 
 ![regression analysis](https://github.com/user-attachments/assets/e4da65c1-a4bb-4e67-bb5c-cad4b9a9d6c2)
 
