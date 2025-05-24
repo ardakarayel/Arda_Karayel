@@ -52,7 +52,76 @@ def describe_data(data, label):
     print(f"Variance           : {statistics.variance(data):.2f}")
     print(f"Standard Deviation : {statistics.stdev(data):.2f}")
 
-# Output stats for all three datasets
 describe_data(enrollment_rates, "Tertiary Enrollment Rate (2017) % 0-100")
 describe_data(literacy_rates, "Adult Literacy Rate (2017) % 0-100")
 describe_data(happiness_scores, "Happiness Score (2017) 0-10")
+
+// coastline statistics 
+
+df = pd.read_csv("coastlines.csv")
+df = df.dropna(subset=["coast_to_area_wf"])
+df["coast_ratio"] = df["coast_to_area_wf"]
+
+data = df["coast_ratio"]
+
+print("- Coastline-to-Area Ratio (2017) % 0–100")
+print(f"\nCount : {data.count()}")
+print(f"Mean : {data.mean():.2f}")
+print(f"Median : {data.median():.2f}")
+print(f"Mode : {data.mode().iloc[0]:.2f}")
+print(f"Variance : {data.var():.2f}")
+print(f"\nStandard Deviation : {data.std():.2f}")
+
+// Arable Land Statistics
+
+df = pd.read_csv("arable_land_2017.csv")
+data = df["arable_land_percent"].dropna()
+
+print("- Arable Land Ratio (2017) % 0–100")
+print(f"\nCount : {data.count()}")
+print(f"Mean : {data.mean():.2f}")
+print(f"Median : {data.median():.2f}")
+print(f"Mode : {data.mode().iloc[0]:.2f}")
+print(f"Variance : {data.var():.2f}")
+print(f"\nStandard Deviation : {data.std():.2f}")
+
+// Forest Land Statistics 
+
+forest_df = pd.read_csv("Forest_Area__2017__-_All_Valid_Countries.csv")
+
+forest_data = forest_df["2017"].dropna()
+
+count = forest_data.count()
+mean = forest_data.mean()
+median = forest_data.median()
+try:
+    mode_val = mode(forest_data)
+except:
+    mode_val = "No unique mode"
+variance = forest_data.var()
+std_dev = forest_data.std()
+
+print("Forest Area Ratio (2017) %0-100")
+print(" ")
+print(f"Count : {count}")
+print(f"Mean : {mean:.2f}")
+print(f"Median : {median:.2f}")
+print(f"Mode : {mode_val}")
+print(f"Variance : {variance:.2f}")
+print(f"Standard Deviation : {std_dev:.2f}")
+
+// Air Pollution Statistics
+
+df_pm25 = pd.read_excel("PM2.5_2017_Countries.xlsx")
+
+pm25_stats = {
+    'Count': int(df_pm25['PM2.5_2017'].count()),
+    'Mean': round(float(df_pm25['PM2.5_2017'].mean()), 2),
+    'Median': round(float(df_pm25['PM2.5_2017'].median()), 2),
+    'Mode': round(float(df_pm25['PM2.5_2017'].mode()[0]), 2),
+    'Variance': round(float(df_pm25['PM2.5_2017'].var()), 2),
+    'Standard Deviation': round(float(df_pm25['PM2.5_2017'].std()), 2)
+}
+
+for k, v in pm25_stats.items():
+    print(f"{k} : {v}")
