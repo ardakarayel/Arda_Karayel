@@ -646,6 +646,42 @@ There is strong evidence that greater coastline access is positively associated 
 Overall, these results support the hypothesis that higher access to advanced education, clean air, and coastal environments are associated with greater national happiness. In contrast, basic literacy, forest coverage, and agricultural land appear to have limited direct influence on happiness scores at the global level.
 
 
-# Machine Learninng Tecniques
+# Machine Learning Tecniques
+
+- Regression: Predicting Step Count
+
+Objective: The goal of this analysis was to predict step counts based on menstrual phases, flights climbed, and walking/running distance using a Random Forest Regression model.
+
+Results Overview:
+
+RMSE (Root Mean Squared Error): 320.95, indicating the average deviation of predicted values from actual values in terms of step counts.
+
+MAE (Mean Absolute Error): 219.14, which reflects the average absolute difference between predicted and actual values.
+
+Interpretation: These metrics demonstrate that the regression model performs reasonably well, with predictions closely aligning with actual step counts.
+
+![regression analysis](https://github.com/user-attachments/assets/e4da65c1-a4bb-4e67-bb5c-cad4b9a9d6c2)
+
+- Bar Chart
+  Average Actual and Predicted Happiness Score by Year
+
+ Both actual and predicted values show consistent trends across years, indicating the model’s ability to capture general patterns.
+Small differences between actual and predicted scores suggest room for slight improvement in capturing year-specific factors.
+
+![bar chart](https://github.com/user-attachments/assets/ad69f9e4-32da-4ccf-b3a4-8e1512678237)
 
 
+- Confusion Matrix For Binned Happiness Score
+
+ Happiness scores were divided into five categories to evaluate how accurately the model predicts each class.
+The matrix shows strong alignment along the diagonal, especially in the Neutral and Happy categories, indicating high classification accuracy.
+Most misclassifications occur between neighboring classes like Unhappy and Neutral, which is expected due to score proximity.
+This suggests the model captures overall patterns well but could be refined for clearer separation between close score ranges.
+
+![confusion matrix](https://github.com/user-attachments/assets/1abee017-9c6e-4286-aa46-62e68ae2e178)
+
+Very Unhappy: 0–4
+Unhappy: 4–5
+Neutral: 5–6
+Happy: 6–7
+Very Happy: 7–10
