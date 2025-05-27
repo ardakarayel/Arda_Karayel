@@ -728,6 +728,10 @@ Model limitations: While tree-based models performed well, they can be harder to
 
 The analysis may contain mild bias due to missing data in certain countries and the limited selection of variables. However, the overall results are statistically significant and consistent with the information provided by the dataset.
 
+I added multiple independent features not originally included in the World Happiness Index such as forest area, air pollution, coastline-to-area ratio, and arable land percentage to minimize feature overlap and reduce bias in the analysis.
+
+I also transformed some features and clarified that the prediction task involves regression (continuous happiness score) as well as classification based on binned score ranges.
+
 # Conclusion 
 
  This study explored the relationship between education levels, environmental indicators, and national happiness scores across a broad set of countries. The findings suggest that tertiary education enrollment, clean air (low PM2.5 levels), and geographic features such as coastline ratio are significantly associated with higher happiness levels.
