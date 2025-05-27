@@ -413,9 +413,9 @@ The descriptive statistics highlight a significant variance in tertiary educatio
 
    * Arable Land vs Happiness Score (Spearman Correlation)
      
-        Correlation Coefficient (ρ): -0.1371
+         Correlation Coefficient (ρ): -0.1371
      
-        P-value                    : 0.1141  
+         P-value                    : 0.1141  
 
    The study examined how several factors—including education, land use, and environmental conditions—relate to national happiness scores using both Pearson and Spearman correlation methods.
 
@@ -713,3 +713,25 @@ Unhappy: 4–5
 Neutral: 5–6
 Happy: 6–7
 Very Happy: 7–10
+
+# Limitations 
+
+This analysis may contain mild bias due to several factors:
+
+Data availability: Not all countries had complete datasets for all variables, which led to a reduced sample size in some comparisons.
+
+Limited variable selection: The analysis focused on a specific set of factors (education and environmental), while excluding others such as healthcare, governance, income inequality, or cultural differences, which may also significantly influence happiness.
+
+Interpretation bias: The subjective nature of happiness, and the fact that it is based on self-reported surveys, introduces cultural or regional interpretation differences.
+
+Model limitations: While tree-based models performed well, they can be harder to interpret and may overfit certain patterns in relatively small datasets.
+
+The analysis may contain mild bias due to missing data in certain countries and the limited selection of variables. However, the overall results are statistically significant and consistent with the information provided by the dataset.
+
+# Conclusion 
+
+ This study explored the relationship between education levels, environmental indicators, and national happiness scores across a broad set of countries. The findings suggest that tertiary education enrollment, clean air (low PM2.5 levels), and geographic features such as coastline ratio are significantly associated with higher happiness levels.
+
+In contrast, variables like adult literacy, forest area, and arable land showed weak or statistically insignificant correlations, indicating that not all development indicators directly impact subjective well-being.
+
+Among the machine learning models tested, tree-based methods like Decision Tree and Random Forest outperformed linear regression, capturing non-linear patterns between variables and happiness. These results underline the complexity of happiness as a multi-dimensional construct and suggest that access to higher education and environmental quality are stronger predictors of national well-being than basic education or land use factors.
